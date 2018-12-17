@@ -20,8 +20,11 @@ curl --retry 3 --silent --location $JVM_COMMON_BUILDPACK | tar xzm -C /tmp/jvm-c
 
 install_java_with_overlay ${BUILD_DIR}
 
-WILDFLY_VERSION="10.1.0.Final"
-WILDFLY_SHA1="9ee3c0255e2e6007d502223916cefad2a1a5e333"
+#WILDFLY_VERSION="10.1.0.Final"
+#WILDFLY_SHA1="9ee3c0255e2e6007d502223916cefad2a1a5e333"
+WILDFLY_VERSION="15.0.0.Final"
+WILDFLY_SHA1="a387f2ebf1b902fc09d9526d28b47027bc9efed9"
+
 JBOSS_HOME=".jboss/wildfly-${WILDFLY_VERSION}"
 
 cd $BUILD_DIR
