@@ -33,6 +33,7 @@ cd $BUILD_DIR
 
 mkdir -p .jboss
 
+if [! -d "$JBOSS_HOME" ]; then
 echo -n "-----> Installing Wildfly ${WILDFLY_VERSION}... "
 curl -O http://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz
 echo "downloaded"
@@ -44,6 +45,7 @@ mv wildfly-$WILDFLY_VERSION $JBOSS_HOME
 echo "moved"
 rm wildfly-$WILDFLY_VERSION.tar.gz
 echo "done"
+fi
 
 echo -n "-----> Deploying war file(s)... "
 cp target/*.war $JBOSS_HOME/standalone/deployments/
