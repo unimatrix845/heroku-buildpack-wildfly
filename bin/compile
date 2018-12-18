@@ -33,7 +33,7 @@ cd $BUILD_DIR
 
 mkdir -p .jboss
 
-if [ -d "$JBOSS_HOME" ]; then 
+if [ -d "/app/.jboss" ]; then
 echo "Already installed"
 else
 echo -n "-----> Installing Wildfly ${WILDFLY_VERSION}... "
